@@ -1,11 +1,6 @@
 <?php
-session_start();
-
-$conn=mysqli_connect("localhost","root","","twi");
-
-if(mysqli_connect_errno()){
-  echo "Failed to connect:".mysqli_connect_errno;
-}
+$title="Register";
+require_once("config/db.php");
 // declaring var
 
 $fname="";
@@ -137,16 +132,7 @@ if(isset($_POST['register_button'])){
 
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-</head>
-<body>
+<?php require_once("template/header.php"); ?>
 <form action="register.php" method="post">
 <div>
 <input type="text" name="reg_fname" placeholder="First Name" value="<?php if(isset($_SESSION['reg_fname'])){
@@ -226,5 +212,4 @@ echo "You all set ! Go head and login";
 </span>
 </form>
   
-</body>
-</html>
+<?php require_once("template/footer.php") ?>
