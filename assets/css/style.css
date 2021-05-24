@@ -62,3 +62,37 @@ input[type=submit]{
   display: block;
   text-align: center;
 }
+
+
+/* header navbar */
+header{
+  background: #f1f1f1;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ padding: 2rem;
+}
+
+header h1{
+  color: #637BFF;
+
+}
+
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  margin: 1rem;
+  color: #78909C;
+  
+}
+
+ .user a{
+  color: #21C8F6;
+}
