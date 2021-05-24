@@ -133,33 +133,37 @@ if(isset($_POST['register_button'])){
 ?>
 
 <?php require_once("template/header.php"); ?>
+
+
+<span class='sucess'>
+<?php  if(in_array("<span  style='color:green;'>You all set ! Gohead and login</span>" ,$error_array))
+echo "You all set ! Go head and login";
+?>
+</span>
 <form action="register.php" method="post">
+
 <div>
 <input type="text" name="reg_fname" placeholder="First Name" value="<?php if(isset($_SESSION['reg_fname'])){
   echo $_SESSION['reg_fname'];
 } ?>"  required>
-
-<span> <?php  if(in_array("your first name must be between 2 and 25 characters" ,$error_array))
+</div>
+<span class="error"> <?php  if(in_array("your first name must be between 2 and 25 characters" ,$error_array))
 echo "your first name must be between 2 and 25 characters "
  ?></span>
-
-</div>
 
 <div>
 <input type="text" name="reg_lname" placeholder="Last Name" value="<?php if(isset($_SESSION['reg_lname'])){
   echo $_SESSION['reg_lname'];
 } ?>"  required>
-
-<span> <?php  if(in_array("your last name must be between 2 and 25 characters" ,$error_array))
+</div>
+<span class="error"> <?php  if(in_array("your last name must be between 2 and 25 characters" ,$error_array))
 echo "your last name must be between 2 and 25 characters "
  ?></span>
-</div>
 
 <div>
 <input type="email" name="reg_email" placeholder="Email" value="<?php if(isset($_SESSION['reg_email'])){
   echo $_SESSION['reg_email'];
 } ?>"  required>
-
 </div>
 
 <div>
@@ -168,8 +172,8 @@ echo "your last name must be between 2 and 25 characters "
   echo $_SESSION['reg_email2'];
 } ?>"  required>
 
-
-<span> 
+</div>
+<span class="error"> 
 <?php  if(in_array("Email already in use" ,$error_array))
 echo "Email is already in user ";
   else if(in_array("Invalid format" ,$error_array))
@@ -180,15 +184,13 @@ echo "email don't much";
  ?>
  </span>
 
-</div>
 
 <div>
 <input type="password" name="reg_password" placeholder="Password" required>
 <input type="password" name="reg_password2" placeholder="Confirm Password" required>
+</div>
 
-
-
-<span> 
+<span class="error"> 
 <?php  if(in_array("Your password not much" ,$error_array))
 echo "Your password not much";
 
@@ -200,16 +202,10 @@ echo "your password must be between 2 and 25 characters and number";
  ?>
  </span>
 
-</div>
-
 <div>
 <input type="submit" value="Register" name="register_button">
 </div>
-<span>
-<?php  if(in_array("<span style='color:green;'>You all set ! Gohead and login</span>" ,$error_array))
-echo "You all set ! Go head and login";
-?>
-</span>
+<a href="login.php">Already have an account? Sign in here</a>
 </form>
   
 <?php require_once("template/footer.php") ?>

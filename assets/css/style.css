@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 30 auto;
+}
+
+/* register and login page */
+
+form {
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ flex-direction: column;
+ background: #f1f1f1;
+ text-align: center;
+ text-align: center;
+
+}
+
+form input {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+
+}
+
+input[type=submit]{
+  margin-top: 1rem;
+  background: rgb(36, 100, 119);
+  color: #f1f1f1;
+  border: none;
+  padding: 20px 40px;
+  cursor: pointer;
+  display: block;
+}
+
+.success{
+  background: green;
+  color: #fff;
+  padding: 10px 20px ;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.error{
+  color: red;
+  display: block;
+  text-align: center;
+}

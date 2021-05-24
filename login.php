@@ -46,18 +46,18 @@ if(isset($_POST['login_button'])){
 <input type="email" name="log_email" placeholder="Email" value="<?php if(isset($_SESSION['log_email'])){
   echo $_SESSION['log_email'];
 } ?>"  required>
-
-<span> <?php  if(in_array("Email or passowrd was incorrect" ,$error_array))
-echo "Email or passowrd was incorrect "
- ?></span>
 </div>
 
+<span class="error"> <?php  if(in_array("Email or passowrd was incorrect" ,$error_array))
+echo "Email or passowrd was incorrect "
+ ?></span>
 <div>
+
 <input type="password" name="log_password" placeholder="Password">
 </div>
 
 <input type="submit" name="login_button" value="Login">
-
+<a href="register.php">Need an account? Register here!</a>
 </form>
   
 <?php require_once("template/footer.php") ?>
