@@ -10,7 +10,7 @@ body {
 
 .container {
   max-width: 1100px;
-  margin: 30 auto;
+  margin: 30px auto;
 }
 
 /* register and login page */
@@ -94,5 +94,48 @@ nav ul li a {
 }
 
  .user a{
-  color: #21C8F6;
+  color: #637BFF;
+}
+
+
+/* index main page */
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+}
+
+.user-info{
+  background: #f1f1f1;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  border-radius: 5px;
+
+}
+
+.user-info span:first-child{
+color: #FFC73C;
+}
+.user-info span {
+  color: #8B60ED;
+  display: block;
+}
+
+
+.user-info img {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  display: block;
+
+}
+
+.main {
+  background: #f1f1f1;
+  padding: 1rem;
+  margin: 1rem;
+
 }
