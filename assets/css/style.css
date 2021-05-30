@@ -15,29 +15,26 @@ body {
 
 /* register and login page */
 
-form {
+.reg {
   display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh;
- flex-direction: column;
- background: #f1f1f1;
- text-align: center;
- text-align: center;
-
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f1f1f1;
+  text-align: center;
+  text-align: center;
 }
 
-form input {
+.reg input {
   display: block;
   padding: 1rem;
   margin-bottom: 10px;
   border-radius: 5px;
   border: none;
   font-size: 1.2rem;
-
 }
 
-input[type=submit]{
+input[type='submit'] {
   margin-top: 1rem;
   background: rgb(36, 100, 119);
   color: #f1f1f1;
@@ -47,95 +44,90 @@ input[type=submit]{
   display: block;
 }
 
-.success{
+.success {
   background: green;
   color: #fff;
-  padding: 10px 20px ;
+  padding: 10px 20px;
   display: block;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.error{
+.error {
   color: red;
   display: block;
   text-align: center;
 }
 
-
 /* header navbar */
-header{
+header {
   background: #f1f1f1;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
- padding: 2rem;
+  padding: 2rem;
 }
 
-header h1{
-  color: #637BFF;
-
+header h1 {
+  color: #637bff;
 }
-
 
 header nav ul {
   display: flex;
   list-style: none;
 }
 
-
 nav ul li a {
   text-decoration: none;
   margin: 1rem;
-  color: #78909C;
-  
+  color: #78909c;
 }
 
- .user a{
-  color: #637BFF;
+.user a {
+  color: #637bff;
 }
-
 
 /* index main page */
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
 }
 
-.user-info{
+.user-info {
   background: #f1f1f1;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   margin: 1rem;
   border-radius: 5px;
-
 }
 
-.user-info span:first-child{
-color: #FFC73C;
+.user-info span:first-child {
+  color: #3cff5c;
 }
 .user-info span {
-  color: #8B60ED;
+  color: #432a7e;
   display: block;
 }
-
 
 .user-info img {
   border-radius: 50px;
   width: 100px;
   height: 100px;
   display: block;
-
 }
 
 .main {
   background: #f1f1f1;
   padding: 1rem;
   margin: 1rem;
+}
 
+textarea {
+  width: 100%;
+  border-radius: 5px;
 }

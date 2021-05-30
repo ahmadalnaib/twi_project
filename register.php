@@ -140,7 +140,7 @@ if(isset($_POST['register_button'])){
 echo "You all set ! Go head and login";
 ?>
 </span>
-<form action="register.php" method="post">
+<form action="register.php" method="post" class="reg">
 
 <div>
 <input type="text" name="reg_fname" placeholder="First Name" value="<?php if(isset($_SESSION['reg_fname'])){

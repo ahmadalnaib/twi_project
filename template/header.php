@@ -2,16 +2,9 @@
 
  require_once("config/db.php");
 
- if(isset($_SESSION['username'])){
-   $userLoggedIn=$_SESSION['username'];
-
-   $query="SELECT * FROM users WHERE username='$userLoggedIn'";
-   $user_details_query=mysqli_query($conn,$query);
-   $user=mysqli_fetch_array($user_details_query);
- }else{
-   header("Location:register.php");
- }
  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +21,7 @@
   <h1>twi</h1>
   <nav>
     <ul>
-    <li class="user"><a title="Hi" href="#"><?php echo $user['first_name'] ?></a></li>
+    <!-- <li class="user"><a title="Hi" href="#"><?php echo $userLoggedIn ?></a></li> -->
 
     <li><a title="home" href="index.php"><i class="fas fa-home"></i></a></li>
 
@@ -42,7 +35,7 @@
     <li><a title="settings" href="#"><i class="fas fa-sliders-h"></i></a></li>
     
 
-    <li><a title="logout" href="#"><i class="fas fa-angry"></i></a></li>
+    <li><a title="logout" href="logout.php"><i class="fas fa-angry"></i></a></li>
     
     </ul>
   </nav>
